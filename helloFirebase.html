@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HelloFirebase</title>
+</head>
+<body ng-app="HelloFirebase">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+	<script src="js/module.js"></script>
+
+
+	<div ng-controller="HelloFirebaseController as vm">
+		<div>
+			Name: <input type="text" ng-model="name"></input> <br/>
+			Birthday: <input type="text" ng-model="birthday"></input> <br/>
+			<button ng-click="vm.addUser(name, birthday)">add user</button> <br/>
+			name:{{name}} <br/>
+			birthday:{{birthday}} <br/>
+			test: {{vm.firebaseData}}
+		</div>
+	</div>
+</body>
+</html>
